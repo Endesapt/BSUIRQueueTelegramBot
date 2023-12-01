@@ -24,5 +24,11 @@ namespace BSUIRQueueTelegramBot.Controllers
             await handleUpdateService.HandleUpdateAsync(update, cancellationToken);
             return Ok();
         }
+
+        [HttpGet("/")]
+        public async Task<IActionResult> Get()
+        {
+            return Ok("App is working");
+        }
     }
 }
